@@ -12,5 +12,6 @@ cache:
 
 script:
   - cd ticker_stress
-  - chmod +x gradlew
-  - ./gradlew run
+  - ./gradlew run --console=plain
+  - cd ddd_actors_kotlin
+  - ./gradlew run --console=plain
