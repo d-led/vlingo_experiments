@@ -17,7 +17,7 @@ plugins {
 application {
 
     // Define the main class for the application
-    mainClassName = "App"
+    mainClassName = "dled.github.App"
 }
 
 dependencies {
