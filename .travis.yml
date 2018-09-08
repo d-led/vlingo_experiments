@@ -13,5 +13,5 @@ cache:
 script:
   - cd ${TRAVIS_BUILD_DIR}/ticker_stress
   - ./gradlew run --console=plain
-  - cd ${TRAVIS_BUILD_DIR}/ddd_actors_kotlin
-  - ./gradlew run --console=plain
+  - cd ${TRAVIS_BUILD_DIR}/ddd_actors_vlingo
+  - ./gradlew test run --console=plain --stacktrace
