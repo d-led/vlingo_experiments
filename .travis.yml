@@ -11,7 +11,7 @@ cache:
     - $HOME/.gradle/wrapper/
 
 script:
-  - cd ticker_stress
+  - cd ${TRAVIS_BUILD_DIR}/ticker_stress
   - ./gradlew run --console=plain
-  - cd ddd_actors_kotlin
+  - cd ${TRAVIS_BUILD_DIR}/ddd_actors_kotlin
   - ./gradlew run --console=plain
