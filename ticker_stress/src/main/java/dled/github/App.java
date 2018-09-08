@@ -17,7 +17,19 @@ public class App {
             
             ticker.tickAway();
 
-            Thread.sleep(15000);
+            int badActorCount = 10;
+            for (int i = 0; i < badActorCount; i++) {
+                final Ticking badActor = world.actorFor(
+                        Definition.has(Loader.class, Definition.parameters(i+1)),
+                        Ticking.class
+                );
+                badActor.tickAway();
+                Thread.sleep(2000);
+            }
+
+            Thread.sleep(30000);
+            System.out.println("Forcing an exit");
+            System.exit(0);
         }  catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -26,67 +38,3 @@ public class App {
         }
     }
 }
-
-/*use "time"
-use "collections"
-
-class dled.github.Tick is TimerNotify
-  let _env : Env
-  var _counter: U64 = 0
-
-  new iso create(env: Env) =>
-    _env = env
-
-  fun ref _next(): String =>
-    _counter = _counter + 1
-    _counter.string()
-
-  fun ref apply(timer: Timer, count: U64): Bool =>
-    _env.out.print("dled.github.Tick "+_next())
-    true
-
-actor Loader
-  var _counter: U64 = 0
-  let _env : Env
-
-  new create(env: Env) =>
-    _env = env
-
-  be spin() =>
-    _spin()
-
-  fun ref _spin() =>
-    while _counter >=  0 do
-      _counter = _counter + 1
-    end
-    _env.out.print(_counter.string())
-
-
-class Load is TimerNotify
-  let _env : Env
-  let _loaders: List[Loader] = List[Loader]
-  var _counter: U64 = 0
-
-  new iso create(env: Env) =>
-    _env = env
-
-  fun ref _next() =>
-    _counter = _counter + 1
-    _env.out.print("Started task "+_counter.string())
-    let l = Loader(_env)
-    _loaders.push(l)
-    l.spin()
-
-  fun ref apply(timer: Timer, count: U64): Bool =>
-    _next()
-    true
-
-
-actor Main
-  new create(env: Env) =>
-    let timers = Timers
-    let timer = Timer(dled.github.Tick(env), 0, 1_000_000_000 )
-    timers(consume timer)
-    env.out.print("Started the ticker")
-    let load_timer = Timer(Load(env), 0, 2_000_000_000 )
-    timers(consume load_timer)*/

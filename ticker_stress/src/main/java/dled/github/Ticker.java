@@ -4,6 +4,8 @@ import io.vlingo.actors.Actor;
 
 public class Ticker extends Actor implements Ticking {
     int count = 0;
+
+    @Override
     public void tickAway() {
         count++;
         System.out.println("Tick " + count);
