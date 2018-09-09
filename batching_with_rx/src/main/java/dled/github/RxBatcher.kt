@@ -23,7 +23,7 @@ class RxBatcher : Actor, Batcher {
         window
                 .subscribe({l ->
                     processor.process(l)
-                },{e->println("finished with ${e}")})
+                },{e->println("interrupted: ${e.localizedMessage}")})
                 .addTo(subscriptions)
     }
 
