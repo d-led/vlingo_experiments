@@ -20,10 +20,8 @@ public class App {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        
         world.terminate();
-        System.out.println("Exiting early ...");
-        System.exit(0);
     }
 
     private static void exitIfHung() {
