@@ -10,4 +10,4 @@ echo "--=== starting Joe ===--"
 echo "--=== starting Mike in the Background ===--"
 elixir --sname mike@localhost mike.exs &
 
-fg
+fg || true

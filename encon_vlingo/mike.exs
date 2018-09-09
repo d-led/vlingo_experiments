@@ -16,7 +16,7 @@ defmodule Mike do
     defp try_talk_to(true, _) do
         send({:joe,:joe@localhost}, {self(),"Hello, Joe!"})
         receive do
-            m -> IO.puts "Mike: received from Joe: #{m}"
+            m -> IO.puts "Mike: received: #{m}"
         end
     end
 
