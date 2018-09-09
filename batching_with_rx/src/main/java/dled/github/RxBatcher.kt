@@ -19,7 +19,6 @@ class RxBatcher : Actor, Batcher {
         val window = subject
                 .buffer(1, TimeUnit.SECONDS, 10)
                 .filter { l -> l.isNotEmpty() }
-//                .timeout(defaultTimeoutSeconds, TimeUnit.SECONDS)
 
         window
                 .subscribe({l ->
