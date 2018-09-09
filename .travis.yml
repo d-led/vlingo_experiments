@@ -11,8 +11,9 @@ otp_release: '21.0'
 
 install:
   - echo "passing..."
-  # - wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
-  # - sudo apt-get update && sudo apt-get install elixir
+  # - git clone --branch 1.6.2 https://githucom/appulse-projects/encon-java.git
+  # - cd encon-java
+  # - mvn install -DskipTests=true
 
 before_script:
   - echo "passing..."
@@ -24,6 +25,8 @@ cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+    - $HOME/.m2
 
 script:
+  - cd ${TRAVIS_BUILD_DIR}
   - ./run_all.sh

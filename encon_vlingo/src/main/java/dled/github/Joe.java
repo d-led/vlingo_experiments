@@ -8,6 +8,8 @@ import io.appulse.encon.terms.ErlangTerm;
 import io.appulse.encon.terms.type.ErlangPid;
 import io.appulse.epmd.java.core.model.NodeType;
 import io.vlingo.actors.Actor;
+import io.vlingo.actors.Completes;
+import io.vlingo.actors.Stoppable;
 
 import static io.appulse.encon.terms.Erlang.string;
 
@@ -30,7 +32,7 @@ public class Joe extends Actor implements Listener {
     }
 
     @Override
-    public void waitForCall() {
+    public Completes<Stoppable> waitForCall() {
         ErlangTerm payload = mailbox.receive().getBody();
 
         ErlangPid from = payload.get(0)
@@ -53,6 +55,7 @@ public class Joe extends Actor implements Listener {
         // hang up
         node.close();
         System.out.println("Node closed");
-        this.stop();
+
+        return completes().with(this);
     }
 }

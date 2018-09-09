@@ -14,13 +14,21 @@ public class App {
                     Listener.class
             );
 
-            listener.waitForCall();
+            listener
+                    .waitForCall()
+                    .atLast(a->{
+                        System.out.println("Early exit ...");
+                        a.stop();
+                        world.terminate();
+                        System.exit(0);
+                    })
+            ;
 
             exitIfHung();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         world.terminate();
     }
 
