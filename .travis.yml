@@ -1,6 +1,17 @@
-language: elixir
+language: groovy
 
 sudo: false
+
+addons:
+  apt:
+    sources:
+      - sourceline: deb https://packages.erlang-solutions.com/ubuntu trusty contrib
+        key_url: https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc
+    packages:
+      - elixir
+
+cache:
+  apt: true
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -17,3 +28,6 @@ script:
   - ./gradlew test run --console=plain --stacktrace
   - cd ${TRAVIS_BUILD_DIR}/batching_with_rx
   - ./gradlew run --console=plain --stacktrace
+  - elixir --version
+  # - cd ${TRAVIS_BUILD_DIR}/encon_vlingo
+  # - ./run_all.sh
