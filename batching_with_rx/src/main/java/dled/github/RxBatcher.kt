@@ -7,9 +7,9 @@ import io.vlingo.actors.Actor
 import java.util.concurrent.TimeUnit
 
 class RxBatcher : Actor, Batcher {
-    private var processor: Processor
-    private var subject = PublishSubject.create<Item>()
-    private var subscriptions = CompositeDisposable()
+    private val processor: Processor
+    private val subject = PublishSubject.create<Item>()
+    private val subscriptions = CompositeDisposable()
     private val defaultTimeoutSeconds = 3L
 
 
