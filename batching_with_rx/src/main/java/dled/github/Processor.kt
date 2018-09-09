@@ -1,5 +1,5 @@
 package dled.github
 
 interface Processor {
-    fun process(items: List<Item>)
+    fun process(items: Collection<Item>)
 }
