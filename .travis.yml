@@ -26,12 +26,4 @@ cache:
     - $HOME/.gradle/wrapper/
 
 script:
-  - cd ${TRAVIS_BUILD_DIR}/ticker_stress
-  - ./gradlew run --console=plain
-  - cd ${TRAVIS_BUILD_DIR}/ddd_actors_vlingo
-  - ./gradlew test run --console=plain --stacktrace
-  - cd ${TRAVIS_BUILD_DIR}/batching_with_rx
-  - ./gradlew run --console=plain --stacktrace
-  - elixir --version
-  - cd ${TRAVIS_BUILD_DIR}/encon_vlingo
   - ./run_all.sh

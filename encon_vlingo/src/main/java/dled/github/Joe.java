@@ -36,12 +36,12 @@ public class Joe extends Actor implements Listener {
         ErlangPid from = payload.get(0)
                 .filter(ErlangTerm::isPid)
                 .map(ErlangTerm::asPid)
-                .orElseThrow(() -> new RuntimeException("Expected first element is PID"));
+                .orElseThrow(() -> new RuntimeException("Expected first term to be a PID"));
 
         String text = payload.get(1)
                 .filter(ErlangTerm::isBinary)
                 .map(ErlangTerm::asText)
-                .orElseThrow(() -> new RuntimeException("Expected second element is binary"));
+                .orElseThrow(() -> new RuntimeException("Expected second term to be binary"));
 
         System.out.format("Joe: received '%s' from %s\n", text, from);
 
@@ -49,7 +49,7 @@ public class Joe extends Actor implements Listener {
         mailbox.send(from, string("Hello, Mike!"));
 
         // hang up
-        node.close();
+//        node.close();
         this.stop();
     }
 }

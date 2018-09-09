@@ -5,7 +5,7 @@ defmodule Mike do
     end
 
     defp dial(attempt \\ 0)
-    defp dial(22), do: IO.puts "hanging up"
+    defp dial(42), do: IO.puts "hanging up"
 
     defp dial(attempt) do
         IO.puts "Mike: beep"
