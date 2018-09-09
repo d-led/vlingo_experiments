@@ -1,8 +1,12 @@
 dist: trusty
-language: elixir
+language: generic
 sudo: false
 
 jdk: openjdk8
+
+elixir:
+  - '1.7.3'
+otp_release: '21.0'
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
