@@ -15,3 +15,5 @@ script:
   - ./gradlew run --console=plain
   - cd ${TRAVIS_BUILD_DIR}/ddd_actors_vlingo
   - ./gradlew test run --console=plain --stacktrace
+  - cd ${TRAVIS_BUILD_DIR}/batching_with_rx
+  - ./gradlew run --console=plain --stacktrace
