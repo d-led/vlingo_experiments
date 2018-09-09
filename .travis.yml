@@ -33,5 +33,5 @@ script:
   - cd ${TRAVIS_BUILD_DIR}/batching_with_rx
   - ./gradlew run --console=plain --stacktrace
   - elixir --version
-  # - cd ${TRAVIS_BUILD_DIR}/encon_vlingo
-  # - ./run_all.sh
+  - cd ${TRAVIS_BUILD_DIR}/encon_vlingo
+  - ./run_all.sh
