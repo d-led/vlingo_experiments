@@ -2,6 +2,6 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-gradle build --console=plain
-gradle run --console=plain &
+./gradlew build --console=plain
+./gradlew run --console=plain &
 elixir --sname mike@localhost mike.exs
