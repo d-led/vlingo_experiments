@@ -1,5 +1,6 @@
 dist: trusty
 language: elixir
+# sudo: true
 sudo: false
 
 jdk: openjdk8
@@ -10,6 +11,8 @@ otp_release: '21.0'
 
 install:
   - echo "passing..."
+  # - wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
+  # - sudo apt-get update && sudo apt-get install elixir
 
 before_script:
   - echo "passing..."
