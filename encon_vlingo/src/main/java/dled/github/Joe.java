@@ -48,6 +48,8 @@ public class Joe extends Actor implements Listener {
         // reply
         mailbox.send(from, string("Hello, Mike!"));
 
+        System.out.flush();
+
         // hang up
         node.close();
         this.stop();
