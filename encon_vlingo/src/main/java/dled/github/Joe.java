@@ -49,7 +49,7 @@ public class Joe extends Actor implements Listener {
         mailbox.send(from, string("Hello, Mike!"));
 
         // hang up
-//        node.close();
+        node.close();
         this.stop();
     }
 }
