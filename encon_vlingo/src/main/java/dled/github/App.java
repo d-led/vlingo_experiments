@@ -19,11 +19,11 @@ public class App {
             exitIfHung();
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            // waits for quiescence
-            world.terminate();
         }
 
+        world.terminate();
+        System.out.println("Exiting early ...");
+        System.exit(0);
     }
 
     private static void exitIfHung() {

@@ -52,6 +52,7 @@ public class Joe extends Actor implements Listener {
 
         // hang up
         node.close();
+        System.out.println("Node closed");
         this.stop();
     }
 }
