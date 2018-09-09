@@ -1,5 +1,5 @@
 package dled.github
 
 interface Batcher {
-    public fun batch(item: Item)
+    fun batch(item: Item)
 }
