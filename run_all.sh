@@ -10,7 +10,7 @@ cd ${TRAVIS_BUILD_DIR}/ticker_stress
 
 echo "--=== ddd_actors_vlingo ===--"
 cd ${TRAVIS_BUILD_DIR}/ddd_actors_vlingo
-./gradlew clean test run
+./gradlew clean test run --console=plain
 
 echo "--=== batching_with_rx ===--"
 cd ${TRAVIS_BUILD_DIR}/batching_with_rx

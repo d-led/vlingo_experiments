@@ -22,37 +22,36 @@ public class ActorAccountTest {
     BigDecimal balanceSeen;
 
     @Test
-    public void testOpeningAccount() {
+    public void testOpeningAccount() throws InterruptedException{
         TestUntil test = TestUntil.happenings(1);
         TestActor<AccountListener> l = testListenerForHappenings(test);
 
-        TestActor<Account> a = testAccount(new BigDecimal(10), l.actor());
+        final TestActor<Account> a = testAccount(new BigDecimal(10), l.actor());
 
-        l.actor().lastBalanceSeen().andThen((b) -> {
-            setBalance(b);
+        a.actor().depositFunds(new BigDecimal(1));
+
+        l.actor().lastBalanceSeen().andThen(b -> {
+            assertEquals(new BigDecimal(11), b);
             return b;
         });
 
-        assertEquals(new BigDecimal(11), balanceSeen);
         assertTrue("account should have been created", test.completesWithin(1000));
     }
 
     @Test
-    public void testUsingTheAccount() {
+    public void testUsingTheAccount() throws InterruptedException {
         TestUntil test = TestUntil.happenings(3);
-        BigDecimal balance = new BigDecimal(0);
         TestActor<AccountListener> l = testListenerForHappenings(test);
 
-        TestActor<Account> a = testAccount(new BigDecimal(10), l.actor());
+        final TestActor<Account> a = testAccount(new BigDecimal(10), l.actor());
         a.actor().depositFunds(new BigDecimal(1));
         a.actor().withdrawFunds(new BigDecimal(2));
 
-        l.actor().lastBalanceSeen().andThen((b) -> {
-            setBalance(b);
+        l.actor().lastBalanceSeen().andThen(b -> {
+            assertEquals(new BigDecimal(9), b);
             return b;
         });
 
-        assertEquals(new BigDecimal(9), balanceSeen);
         assertTrue("account should have been created", test.completesWithin(1000));
     }
 
