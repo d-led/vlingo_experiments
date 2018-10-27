@@ -1,0 +1,27 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.2.71"
+    id 'java'
+    id 'application'
+}
+
+application {
+    mainClassName = "dled.github.App"
+}
+
+dependencies {
+    compile("com.google.guava:guava:23.0")
+
+    compile("io.vlingo:vlingo-actors:0.7.1")
+
+    compile("io.reactivex.rxjava2:rxjava:2.2.2")
+    compile("io.reactivex.rxjava2:rxkotlin:2.2.0")
+
+
+    testCompile("junit:junit:4.12")
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib"
+}
+
+repositories {
+    jcenter()
+}
