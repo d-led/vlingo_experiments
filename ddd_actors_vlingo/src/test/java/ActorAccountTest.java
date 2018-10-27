@@ -28,7 +28,10 @@ public class ActorAccountTest {
 
         TestActor<Account> a = testAccount(new BigDecimal(10), l.actor());
 
-        l.actor().lastBalanceSeen().after((b) -> setBalance(b));
+        l.actor().lastBalanceSeen().andThen((b) -> {
+            setBalance(b);
+            return b;
+        });
 
         assertEquals(new BigDecimal(10), balanceSeen);
         assertTrue("account should have been created", test.completesWithin(1000));
@@ -44,7 +47,10 @@ public class ActorAccountTest {
         a.actor().depositFunds(new BigDecimal(1));
         a.actor().withdrawFunds(new BigDecimal(2));
 
-        l.actor().lastBalanceSeen().after((b) -> setBalance(b));
+        l.actor().lastBalanceSeen().andThen((b) -> {
+            setBalance(b);
+            return b;
+        });
 
         assertEquals(new BigDecimal(9), balanceSeen);
         assertTrue("account should have been created", test.completesWithin(1000));
