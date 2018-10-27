@@ -33,7 +33,7 @@ public class ActorAccountTest {
             return b;
         });
 
-        assertEquals(new BigDecimal(10), balanceSeen);
+        assertEquals(new BigDecimal(11), balanceSeen);
         assertTrue("account should have been created", test.completesWithin(1000));
     }
 
