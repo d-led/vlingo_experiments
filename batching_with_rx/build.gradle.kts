@@ -13,7 +13,7 @@ application {
 dependencies {
     compile("com.google.guava:guava:23.0")
 
-    compile("io.vlingo:vlingo-actors:0.6.1")
+    compile("io.vlingo:vlingo-actors:0.7.1")
 
     compile("io.reactivex.rxjava2:rxjava:2.2.2")
     compile("io.reactivex.rxjava2:rxkotlin:2.2.0")
