@@ -16,12 +16,13 @@ public class App {
 
             listener
                     .waitForCall()
-                    .atLast(a->{
+                    .andThen(a->{
                         System.out.println("Early exit ...");
                         a.stop();
                         world.terminate();
                         System.exit(0);
-                    })
+                        return a;
+                    });
             ;
 
             exitIfHung();

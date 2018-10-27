@@ -8,9 +8,8 @@ application {
 }
 
 dependencies {
-    compile("com.google.guava:guava:23.0")
-    compile("io.appulse.encon:encon:1.5.0")
-    compile("io.vlingo:vlingo-actors:0.6.1")
+    compile("io.appulse.encon:encon:1.6.7")
+    compile("io.vlingo:vlingo-actors:0.7.1")
 
     testCompile("junit:junit:4.12")
 }

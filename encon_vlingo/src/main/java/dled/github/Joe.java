@@ -20,8 +20,8 @@ public class Joe extends Actor implements Listener {
 
     public Joe() {
         NodeConfig config = NodeConfig.builder()
-                .shortNamed(true)
-                .type(NodeType.R4_ERLANG)
+                .shortName(true)
+                .type(NodeType.R6_ERLANG)
                 .build();
 
         node = Nodes.singleNode("joe@localhost", config);
