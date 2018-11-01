@@ -1,0 +1,12 @@
+version: "3"
+services:
+  server:
+    build:
+      context: .
+      args:
+        start: server
+  worker:
+    build:
+      context: .
+      args:
+        start: worker
