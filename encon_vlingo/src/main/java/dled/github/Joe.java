@@ -8,7 +8,7 @@ import io.appulse.encon.terms.ErlangTerm;
 import io.appulse.encon.terms.type.ErlangPid;
 import io.appulse.epmd.java.core.model.NodeType;
 import io.vlingo.actors.Actor;
-import io.vlingo.actors.Completes;
+import io.vlingo.common.Completes;
 import io.vlingo.actors.Stoppable;
 
 import static io.appulse.encon.terms.Erlang.string;

@@ -131,3 +131,12 @@ fabric.properties
 # End of https://www.gitignore.io/api/intellij
 
 # End of https://www.gitignore.io/api/java,code,gradle
+batching_with_rx/.classpath
+batching_with_rx/.project
+**/bin/
+encon_vlingo/.classpath
+encon_vlingo/.project
+ticker_stress/.classpath
+ticker_stress/.project
+vlingo_cluster/.classpath
+vlingo_cluster/.project

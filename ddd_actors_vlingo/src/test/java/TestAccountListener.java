@@ -1,6 +1,6 @@
 import dled.github.AccountListener;
 import io.vlingo.actors.Actor;
-import io.vlingo.actors.Completes;
+import io.vlingo.common.Completes;
 import io.vlingo.actors.testkit.TestUntil;
 
 import java.math.BigDecimal;

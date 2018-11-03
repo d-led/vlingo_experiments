@@ -9,7 +9,7 @@ application {
 
 dependencies {
     compile("com.google.guava:guava:23.0")
-    compile("io.vlingo:vlingo-actors:0.7.1")
+    compile("io.vlingo:vlingo-actors:0.7.3")
 
     testCompile("junit:junit:4.12")
 }

@@ -24,7 +24,7 @@ public class App {
                 Thread.sleep(2000);
             }
 
-            Thread.sleep(20000);
+            Thread.sleep(40000);
             System.out.println("Forcing an exit");
             System.exit(0);
         }  catch (Exception e) {

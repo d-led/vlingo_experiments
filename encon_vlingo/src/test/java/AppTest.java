@@ -1,4 +1,3 @@
-import dled.github.App;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
