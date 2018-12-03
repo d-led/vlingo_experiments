@@ -10,7 +10,7 @@ application {
 
 dependencies {
     compile("io.appulse.encon:encon:1.6.7")
-    compile("io.vlingo:vlingo-actors:0.7.3")
+    compile("io.vlingo:vlingo-actors:0.7.4")
 
     testCompile("junit:junit:4.12")
 }
