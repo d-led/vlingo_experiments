@@ -4,6 +4,9 @@ IFS=$'\n\t'
 
 ./gradlew build --console=plain
 
+python --version
+pip install zmq
+
 echo "starting the client in the background"
 python client.py > /dev/null 2>&1 &
 
