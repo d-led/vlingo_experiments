@@ -20,3 +20,7 @@ elixir --version
 echo "--=== encon_vlingo ===--"
 cd ${TRAVIS_BUILD_DIR}/encon_vlingo
 ./run_all.sh
+
+echo "--=== vlingo_0mq_python ===--"
+cd ${TRAVIS_BUILD_DIR}/vlingo_0mq_python
+./run_all.sh

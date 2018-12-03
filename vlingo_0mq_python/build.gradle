@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'dled.github.VlingoJeromqExample'
+
+dependencies {
+    compile 'io.vlingo:vlingo-actors:0.7.4'
+    compile 'org.zeromq:jeromq:0.4.3'
+}
+
+repositories {
+    jcenter()
+}
