@@ -3,6 +3,7 @@ language: elixir
 # sudo: true
 sudo: false
 
+# needs another approach, as this is an elixir image
 jdk:
   - oraclejdk8
   - openjdk11
