@@ -3,7 +3,10 @@ language: elixir
 # sudo: true
 sudo: false
 
-jdk: openjdk8
+jdk:
+  - oraclejdk8
+  - openjdk11
+  - oraclejdk11
 
 elixir:
   - '1.7.3'
