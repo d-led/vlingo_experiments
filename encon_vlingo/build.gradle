@@ -9,7 +9,7 @@ application {
 }
 
 dependencies {
-    implementation("io.appulse.encon:encon:1.6.9")
+    implementation("io.appulse.encon:encon:1.6.7")
     implementation("io.vlingo:vlingo-actors:0.9.1-RC2")
 
     testImplementation("junit:junit:4.12")
