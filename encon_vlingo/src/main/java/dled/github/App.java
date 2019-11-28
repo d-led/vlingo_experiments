@@ -10,8 +10,8 @@ public class App {
 
         try {
             final Listener listener = world.actorFor(
-                    Definition.has(Joe.class, Definition.NoParameters),
-                    Listener.class
+                Listener.class,
+                Joe.class
             );
 
             listener

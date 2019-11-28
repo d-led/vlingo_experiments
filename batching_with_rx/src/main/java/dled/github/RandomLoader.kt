@@ -4,7 +4,7 @@ import io.vlingo.actors.Actor
 import io.vlingo.common.Scheduled
 import java.util.concurrent.ThreadLocalRandom
 
-class RandomLoader : Actor, Loader, Scheduled {
+class RandomLoader : Actor, Loader, Scheduled<Int> {
     private val batcher: Batcher
 
     constructor(batcher: Batcher) : super() {
@@ -22,7 +22,7 @@ class RandomLoader : Actor, Loader, Scheduled {
         scheduler().scheduleOnce(this, count - 1, 0L, delay)
     }
 
-    override fun intervalSignal(scheduled: Scheduled?, data: Any?) {
-        (scheduled as Loader).load(data as Int)
+    override fun intervalSignal(scheduled: Scheduled<Int>, data: Int) {
+        (scheduled as Loader).load(data)
     }
 }

@@ -7,8 +7,8 @@ plugins {
 mainClassName = 'dled.github.com.App'
 
 dependencies {
-    compile 'io.vlingo:vlingo-cluster:0.7.4'
-    compile 'io.vlingo:vlingo-actors:0.7.4'
+    compile 'io.vlingo:vlingo-cluster:0.9.1-RC2'
+    compile 'io.vlingo:vlingo-actors:0.9.1-RC2'
 
     testCompile 'junit:junit:4.12'
 }

@@ -9,18 +9,18 @@ class App {
         val world = World.start("playground")
         try {
             val processor = world.actorFor(
-                    Definition.has(BatchProcessor::class.java, Definition.NoParameters),
-                    Processor::class.java
+                Processor::class.java,
+                BatchProcessor::class.java
             )
 
             val batcher = world.actorFor(
-                    Definition.has(RxBatcher::class.java, Definition.parameters(processor)),
-                    Batcher::class.java
+                Batcher::class.java,
+                Definition.has(RxBatcher::class.java, Definition.parameters(processor))
             )
 
             val loader = world.actorFor(
-                    Definition.has(RandomLoader::class.java, Definition.parameters(batcher)),
-                    Loader::class.java
+                Loader::class.java,
+                Definition.has(RandomLoader::class.java, Definition.parameters(batcher))
             )
 
             loader.load(42)

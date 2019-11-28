@@ -11,17 +11,17 @@ public class App {
 
         try {
             final AccountListener listener = world.actorFor(
-                    Definition.has(ConsoleAccountListener.class, Definition.NoParameters),
-                    AccountListener.class
+                AccountListener.class,
+                ConsoleAccountListener.class
             );
 
             final Account account = world.actorFor(
-                    Definition.has(SimpleAccount.class,
-                            Definition.parameters(
-                                    "A-1234",
-                                    new BigDecimal(100),
-                                    listener)),
-                    Account.class
+                Account.class,
+                Definition.has(SimpleAccount.class,
+                        Definition.parameters(
+                                "A-1234",
+                                new BigDecimal(100),
+                                listener))
             );
 
             account.depositFunds(new BigDecimal(50));
