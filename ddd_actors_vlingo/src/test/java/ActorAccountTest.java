@@ -67,15 +67,15 @@ public class ActorAccountTest {
 
     TestActor<Account> testAccount(BigDecimal initialBalance, AccountListener listener) {
         return world.actorFor(
-                Definition.has(SimpleAccount.class, Definition.parameters("_", initialBalance, listener)),
-                Account.class
+            Account.class,
+            Definition.has(SimpleAccount.class, Definition.parameters("_", initialBalance, listener))
         );
     }
 
     TestActor<AccountListener> testListenerForHappenings(TestUntil happenings) {
         return world.actorFor(
-                Definition.has(TestAccountListener.class, Definition.parameters(happenings)),
-                AccountListener.class
+            AccountListener.class,
+            Definition.has(TestAccountListener.class, Definition.parameters(happenings))
         );
     }
 
