@@ -9,10 +9,9 @@ application {
 }
 
 dependencies {
-    compile("com.google.guava:guava:23.0")
-    compile("io.vlingo:vlingo-actors:0.9.1-RC2")
+    implementation("io.vlingo:vlingo-actors:0.9.1-RC2")
 
-    testCompile("junit:junit:4.12")
+    testImplementation("junit:junit:4.12")
 }
 
 repositories {

@@ -14,7 +14,7 @@ public class App {
 
             ticker.tickAway();
 
-            int badActorCount = 20;
+            int badActorCount = 12;
             for (int i = 0; i < badActorCount; i++) {
                 final Ticking badActor = world.actorFor(
                     Ticking.class,

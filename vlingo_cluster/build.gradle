@@ -1,16 +1,16 @@
 plugins {
     id 'java'
     id 'application'
-    id "com.github.johnrengelman.shadow" version "4.0.2"
+    id "com.github.johnrengelman.shadow" version "5.2.0"
 }
 
 mainClassName = 'dled.github.com.App'
 
 dependencies {
-    compile 'io.vlingo:vlingo-cluster:0.9.1-RC2'
-    compile 'io.vlingo:vlingo-actors:0.9.1-RC2'
+    implementation 'io.vlingo:vlingo-cluster:0.9.1-RC2'
+    implementation 'io.vlingo:vlingo-actors:0.9.1-RC2'
 
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 }
 
 repositories {
@@ -18,7 +18,7 @@ repositories {
 }
 
 shadowJar {
-   baseName = 'vlingo_cluster_experiment'
+   archiveBaseName = 'vlingo_cluster_experiment'
    classifier = null
-   version = null
+   archiveVersion = null
 }

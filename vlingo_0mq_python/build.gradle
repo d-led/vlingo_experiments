@@ -6,8 +6,8 @@ plugins {
 mainClassName = 'dled.github.VlingoJeromqExample'
 
 dependencies {
-    compile 'io.vlingo:vlingo-actors:0.9.1-RC2'
-    compile 'org.zeromq:jeromq:0.4.3'
+    implementation 'io.vlingo:vlingo-actors:0.9.1-RC2'
+    implementation 'org.zeromq:jeromq:0.4.3'
 }
 
 repositories {

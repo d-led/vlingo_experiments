@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk
 
-ARG  GRADLE_VERSION=4.10.2
+ARG  GRADLE_VERSION=6.0.1
 ARG start
 ENV start ${start}
 
