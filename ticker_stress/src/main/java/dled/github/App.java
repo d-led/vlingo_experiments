@@ -8,17 +8,17 @@ public class App {
         final World world = World.start("playground");
         try {
             final Ticking ticker = world.actorFor(
-                Definition.has(Ticker.class, Definition.NoParameters),
-                Ticking.class
+                Ticking.class,
+                Ticker.class
             );
 
             ticker.tickAway();
 
-            int badActorCount = 10;
+            int badActorCount = 20;
             for (int i = 0; i < badActorCount; i++) {
                 final Ticking badActor = world.actorFor(
-                        Definition.has(Loader.class, Definition.parameters(i+1)),
-                        Ticking.class
+                    Ticking.class,
+                    Definition.has(Loader.class, Definition.parameters(i+1))
                 );
                 badActor.tickAway();
                 Thread.sleep(2000);
