@@ -14,21 +14,18 @@ public class VlingoJeromqExample {
 
             // dependency injection
             final SomeHandler handler= world.actorFor(
-                    Definition.has(
-                            ConsolePrinter.class,
-                            Definition.NoParameters
-                    ),
-                    SomeHandler.class
+                SomeHandler.class,
+                ConsolePrinter.class
             );
 
             final SomeListener listener = world.actorFor(
+                SomeListener.class,
                 Definition.has(
                     JeroMqListener.class,
                     Definition.parameters(
                         handler
                     )
-                ),
-                SomeListener.class
+                )
             );
 
             // start listening
