@@ -3,7 +3,7 @@ package dled.github;
 import io.vlingo.actors.Actor;
 import io.vlingo.common.Scheduled;
 
-public class Ticker extends Actor implements Ticking, Scheduled {
+public class Ticker extends Actor implements Ticking, Scheduled<Boolean> {
     int count = 0;
 
     @Override
@@ -14,7 +14,7 @@ public class Ticker extends Actor implements Ticking, Scheduled {
     }
 
     @Override
-    public void intervalSignal(Scheduled scheduled, Object data) {
+    public void intervalSignal(Scheduled<Boolean> scheduled, Boolean _data) {
         ((Ticking)scheduled).tickAway();
     }
 }

@@ -1,6 +1,5 @@
 package dled.github;
 
-import io.vlingo.actors.Definition;
 import io.vlingo.actors.World;
 
 public class App {
