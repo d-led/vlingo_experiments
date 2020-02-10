@@ -9,7 +9,7 @@ application {
 }
 
 dependencies {
-    implementation("io.vlingo:vlingo-actors:0.9.1-RC2")
+    implementation("io.vlingo:vlingo-actors:1.1.0")
 
     testImplementation("junit:junit:4.12")
 }
