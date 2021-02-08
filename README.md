@@ -1,6 +1,6 @@
 # vlingo experiments
 
-[![Build Status](https://travis-ci.org/d-led/vlingo_experiments.svg?branch=master)](https://travis-ci.org/d-led/vlingo_experiments)
+[![Build Status](https://travis-ci.com/d-led/vlingo_experiments.svg?branch=master)](https://travis-ci.com/d-led/vlingo_experiments)
 
 - Vlingo Actor Model Platform: [https://vlingo.io](https://vlingo.io)
 - Example apps:
