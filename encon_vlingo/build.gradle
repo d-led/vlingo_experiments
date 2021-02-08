@@ -5,12 +5,12 @@ plugins {
 }
 
 application {
-    mainClassName = "dled.github.App"
+    mainClass.set "dled.github.App"
 }
 
 dependencies {
     implementation("io.appulse.encon:encon:1.6.7")
-    implementation("io.vlingo:vlingo-actors:1.1.0")
+    implementation("io.vlingo:vlingo-actors:1.5.0")
 
     testImplementation("junit:junit:4.12")
 }

@@ -3,10 +3,12 @@ plugins {
     id 'application'
 }
 
-mainClassName = 'dled.github.VlingoJeromqExample'
+application {
+    mainClass.set 'dled.github.VlingoJeromqExample'
+}
 
 dependencies {
-    implementation 'io.vlingo:vlingo-actors:1.1.0'
+    implementation 'io.vlingo:vlingo-actors:1.5.0'
     implementation 'org.zeromq:jeromq:0.4.3'
 }
 

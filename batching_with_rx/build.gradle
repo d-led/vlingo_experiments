@@ -5,11 +5,11 @@ plugins {
 }
 
 application {
-    mainClassName = "dled.github.App"
+    mainClass.set "dled.github.App"
 }
 
 dependencies {
-    implementation ("io.vlingo:vlingo-actors:1.1.0")
+    implementation ("io.vlingo:vlingo-actors:1.5.0")
 
     implementation ("io.reactivex.rxjava2:rxjava:2.2.15")
     implementation ("io.reactivex.rxjava2:rxkotlin:2.4.0")
