@@ -30,6 +30,7 @@ public class ActorAccountTest {
 
         a.actor().depositFunds(new BigDecimal(1));
 
+        // this needs a rewrite https://docs.vlingo.io/xoom-actors#testing-actors
         l.actor().lastBalanceSeen().andThen(b -> {
             assertEquals(new BigDecimal(11), b);
             return b;
@@ -47,6 +48,7 @@ public class ActorAccountTest {
         a.actor().depositFunds(new BigDecimal(1));
         a.actor().withdrawFunds(new BigDecimal(2));
 
+        // this needs a rewrite https://docs.vlingo.io/xoom-actors#testing-actors
         l.actor().lastBalanceSeen().andThen(b -> {
             assertEquals(new BigDecimal(9), b);
             return b;
