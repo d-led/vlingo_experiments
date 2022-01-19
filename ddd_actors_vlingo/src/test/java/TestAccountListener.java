@@ -1,7 +1,7 @@
 import dled.github.AccountListener;
-import io.vlingo.actors.Actor;
-import io.vlingo.common.Completes;
-import io.vlingo.actors.testkit.TestUntil;
+import io.vlingo.xoom.actors.Actor;
+import io.vlingo.xoom.common.Completes;
+import io.vlingo.xoom.actors.testkit.TestUntil;
 
 import java.math.BigDecimal;
 

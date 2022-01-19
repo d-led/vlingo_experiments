@@ -1,11 +1,11 @@
 package dled.github;
 
-import io.vlingo.actors.World;
+import io.vlingo.xoom.actors.World;
 
 public class App {
     public static void main(String[] args) {
 
-        final World world = World.start("playground");
+        final World world = World.startWithDefaults("playground");
 
         try {
             final Listener listener = world.actorFor(

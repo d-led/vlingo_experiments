@@ -1,7 +1,7 @@
 package dled.github;
 
-import io.vlingo.actors.Actor;
-import io.vlingo.common.Completes;
+import io.vlingo.xoom.actors.Actor;
+import io.vlingo.xoom.common.Completes;
 
 import java.math.BigDecimal;
 

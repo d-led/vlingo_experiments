@@ -1,12 +1,12 @@
 package dled.github
 
-import io.vlingo.actors.Definition
-import io.vlingo.actors.World
+import io.vlingo.xoom.actors.Definition
+import io.vlingo.xoom.actors.World
 import java.lang.Thread.sleep
 
 class App {
     fun run() {
-        val world = World.start("playground")
+        val world = World.startWithDefaults("playground")
         try {
             val processor = world.actorFor(
                 Processor::class.java,

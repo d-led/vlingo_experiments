@@ -1,11 +1,11 @@
 package dled.github.com;
 
-import io.vlingo.actors.World;
+import io.vlingo.xoom.actors.World;
 
 public class WorkerApp implements AppToRun {
     @Override
     public void run() {
-        final World world = World.start("playground");
+        final World world = World.startWithDefaults("playground");
 
         try {
             System.out.println("starting the worker");

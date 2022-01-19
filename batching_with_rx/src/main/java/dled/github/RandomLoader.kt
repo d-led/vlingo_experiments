@@ -1,7 +1,7 @@
 package dled.github
 
-import io.vlingo.actors.Actor
-import io.vlingo.common.Scheduled
+import io.vlingo.xoom.actors.Actor
+import io.vlingo.xoom.common.Scheduled
 import java.util.concurrent.ThreadLocalRandom
 
 class RandomLoader : Actor, Loader, Scheduled<Int> {

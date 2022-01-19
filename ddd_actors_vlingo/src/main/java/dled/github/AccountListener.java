@@ -1,6 +1,6 @@
 package dled.github;
 
-import io.vlingo.common.Completes;
+import io.vlingo.xoom.common.Completes;
 
 import java.math.BigDecimal;
 

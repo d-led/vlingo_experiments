@@ -1,10 +1,10 @@
 import dled.github.Account;
 import dled.github.AccountListener;
 import dled.github.SimpleAccount;
-import io.vlingo.actors.Definition;
-import io.vlingo.actors.testkit.TestActor;
-import io.vlingo.actors.testkit.TestUntil;
-import io.vlingo.actors.testkit.TestWorld;
+import io.vlingo.xoom.actors.Definition;
+import io.vlingo.xoom.actors.testkit.TestActor;
+import io.vlingo.xoom.actors.testkit.TestUntil;
+import io.vlingo.xoom.actors.testkit.TestWorld;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -59,7 +59,7 @@ public class ActorAccountTest {
 
     @Before
     public void setUp() {
-        world = TestWorld.start("test-world");
+        world = TestWorld.startWithDefaults("test-world");
     }
 
     @After

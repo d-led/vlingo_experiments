@@ -1,13 +1,13 @@
 package dled.github;
 
-import io.vlingo.actors.Definition;
-import io.vlingo.actors.World;
+import io.vlingo.xoom.actors.Definition;
+import io.vlingo.xoom.actors.World;
 
 import java.math.BigDecimal;
 
 public class App {
     public static void main(String[] args) {
-        final World world = World.start("playground");
+        final World world = World.startWithDefaults("playground");
 
         try {
             final AccountListener listener = world.actorFor(

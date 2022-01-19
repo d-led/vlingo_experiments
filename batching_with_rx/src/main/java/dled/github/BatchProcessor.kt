@@ -1,6 +1,6 @@
 package dled.github
 
-import io.vlingo.actors.Actor
+import io.vlingo.xoom.actors.Actor
 
 class BatchProcessor : Actor(), Processor {
     override fun process(items: Collection<Item>) {

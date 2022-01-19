@@ -1,7 +1,7 @@
 package dled.github;
 
-import io.vlingo.actors.Actor;
-import io.vlingo.common.Scheduled;
+import io.vlingo.xoom.actors.Actor;
+import io.vlingo.xoom.common.Scheduled;
 
 public class Ticker extends Actor implements Ticking, Scheduled<Boolean> {
     int count = 0;

@@ -1,6 +1,6 @@
 package dled.github;
 
-import io.vlingo.actors.Actor;
+import io.vlingo.xoom.actors.Actor;
 
 public class ConsolePrinter extends Actor implements SomeHandler {
     @Override
