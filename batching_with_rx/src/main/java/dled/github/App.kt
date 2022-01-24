@@ -6,7 +6,7 @@ import java.lang.Thread.sleep
 
 class App {
     fun run() {
-        val world = World.startWithDefaults("playground")
+        val world = World.start("playground")
         try {
             val processor = world.actorFor(
                 Processor::class.java,

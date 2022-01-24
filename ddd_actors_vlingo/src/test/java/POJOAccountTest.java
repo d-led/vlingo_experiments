@@ -24,7 +24,7 @@ public class POJOAccountTest {
 
     @Before
     public void setUp() {
-        world = TestWorld.startWithDefaults("test-world");
+        world = TestWorld.start("test-world");
     }
 
     @After

@@ -5,7 +5,7 @@ import io.vlingo.xoom.actors.World;
 public class ServerApp implements AppToRun {
     @Override
     public void run() {
-        final World world = World.startWithDefaults("playground");
+        final World world = World.start("playground");
 
         try {
             System.out.println("starting the server");
